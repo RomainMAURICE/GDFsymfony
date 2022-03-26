@@ -1,0 +1,26 @@
+{% block body %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="container" style="background-color: #f2f2f2; border: 2px solid black;margin-top: 2%">
+    <div name="tete" style="text-align: center; border: 2px solid black; background-color: #c9d9f2; margin-top: 1%">
+        <a href="{{path('identification')}}" style="color:black">Déconnexion</a>
+        <a> . </a>
+        <a href="{{path('app_for_supp')}}" style="color:black">supprime des formations</a>
+        <a> . </a>
+        <a href="{{path('ajoutFormation')}}" style="color:black">ajout des formations</a></br></br>
+        <a href="{{path('aff_formation')}}" style="color:black">Voir les employes</a></br></br>
+    </div>
+    Vous êtes dans la liste des Inscription: </br></br>
+    {% if (message) %}
+        {{ message }}
+    {% endif %}
+    {% for inscription in ensInscript %}
+        Inscription: <b>{{ inscription.id }}
+        <b>{{ inscription.statut }}
+        <br>
+        <a href="{{path('app_mod_inscription' , {'id': inscription.id})}}">Accepter</a>
+        <a> . </a>
+        <a href="{{path('app_mod_inscription2' , {'id': inscription.id})}}">Refuser</a></br></br>
+    {% endfor %}
+
+</div>
+{% endblock %}

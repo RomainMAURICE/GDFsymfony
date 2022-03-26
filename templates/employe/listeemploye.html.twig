@@ -1,0 +1,8 @@
+Vous êtes dans la liste des employe: </br>
+{% if (message) %}
+    {{ message }}
+{% endif %}
+{% for employe in ensEmploye %}
+    Login : {{ employe.login }}<br/>
+    Mdp : {{ employe.mdp }}<br/>
+{% endfor %}

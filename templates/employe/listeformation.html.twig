@@ -1,0 +1,19 @@
+{% block body %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="container" style="background-color: #f2f2f2;border: 2px solid black;margin-top: 2%">
+    <img src="https://s1.qwant.com/thumbr/0x0/2/6/04e34296815627bcb826f32eea55ce41125e0175810d412311ede9b4f137eb/logo-formation.png?u=https%3A%2F%2Fwww.wts.fr%2Fwp-content%2Fuploads%2F2018%2F01%2Flogo-formation.png&q=0&b=1&p=0&a=0"/>
+    <br/>
+    Vous êtes dans la liste des formation: </br></br>
+    {% if (message) %}
+        {{ message }}
+    {% endif %}
+    {% for formation in ensFormation %}
+        Date de début: <b>{{ formation.dateDebut|date("m/d/y") }}</b><br>
+        nombre heure : {{ formation.nbreHeures }}</br>
+        departement : {{ formation.departement }}</br>
+        formation : {{ formation.commentaire }}</br>
+        <a href="{{path('app_inscription' , {'id': formation.id})}}">s'inscrire</a></br></br>
+
+    {% endfor %}
+</div>
+{% endblock %}
