@@ -6,13 +6,14 @@
 <div class="container" style="background-color: #f2f2f2;border: 2px solid black;margin-top: 2%">
 
     <div name="tete" style="text-align: center; border: 2px solid black; background-color: #c9d9f2; margin-top: 1%">
-    <a href="{{path('identification')}}" style="color:black">Déconnexion</a>
-    <a> . </a>
-    <a href="{{path('app_for_supp')}}" style="color:black">retour à la liste des formations</a>
-    <a> . </a>
-    <a href="{{path('app_inscrit')}}" style="color:black">valider les formations</a></br></br>
-    <a href="{{path('aff_formation')}}" style="color:black">Voir les employes</a></br></br>
-
+    <h4>
+        <a href="{{path('identification')}}" style="color:black">Déconnexion</a>
+        <a> . </a>
+        <a href="{{path('app_for_supp')}}" style="color:black">retour à la liste des formations</a>
+        <a> . </a>
+        <a href="{{path('app_inscrit')}}" style="color:black">valider les inscriptions</a></br></br>
+        <a href="{{path('aff_formation')}}" style="color:black">Voir les employes</a></br></br>
+    </h4>
     </div>
     {{ form(form)}}
     <br>
