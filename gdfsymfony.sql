@@ -65,9 +65,9 @@ CREATE TABLE IF NOT EXISTS `employe` (
 --
 
 INSERT INTO `employe` (`id`, `login`, `mdp`, `nom`, `prenom`, `statut`) VALUES
-(1, 'tutu', '81dc9bdb52d04dc20036dbd8313ed055', 'tutu', 'tutu', 0),
-(2, 'titi', '81dc9bdb52d04dc20036dbd8313ed055', 'titi', 'titi', 1),
-(3, 'tata', '81dc9bdb52d04dc20036dbd8313ed055', 'tata', 'tata', 1);
+(1, 'romain', '81dc9bdb52d04dc20036dbd8313ed055', 'tutu', 'tutu', 0),
+(2, 'quentin', '81dc9bdb52d04dc20036dbd8313ed055', 'titi', 'titi', 1),
+(3, 'oliver', '81dc9bdb52d04dc20036dbd8313ed055', 'tata', 'tata', 1);
 
 -- --------------------------------------------------------
 
