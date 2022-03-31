@@ -18,7 +18,6 @@
     {% for inscription in ensInscript %}
         Inscription: <b>{{ inscription.id }}
         <b>{{ inscription.statut }}
-        {{ inscription.employe}}
         <br>
         <a href="{{path('app_mod_inscription' , {'id': inscription.id})}}">Accepter</a>
         <a> . </a>
